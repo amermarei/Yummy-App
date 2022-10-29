@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <title>Yummy</title>
+</head>
+<body class="py-5">
+
+  <!-- loading  -->
+  <section id="loading" class="d-flex justify-content-center align-items-center vh-100">
+    <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+  </section>
+  <section class="container w-75 text-center my-2 py-2 mt-2 position-relative">
+    <div class="loading-container">
+      <div class="sm-loading position-absolute ">
+        <i class="fa fa-spinner fa-spin fa-4x"></i>
+      </div>
+    </div>
+  </section>
+    <!-- loading  -->
+
+    <!-- side bar -->
+    <div class="sidebar position-fixed top-0 p-0 start-0  vh-100 row g-0">
+      <div class="col-9 menBar ">
+        <div class="menu h-100 d-flex flex-column justify-content-between align-items-center position-relative  py-4">
+          <ul class="list-unstyled nav-menu p-0 w-100">
+            <li class="searchLink"><i class="fa-solid fa-magnifying-glass  fa-fw me-3"></i>Search</li>
+            <li class="category"><i class="fa-solid fa-layer-group  fa-fw me-3"></i>Categories</li>
+            <li class="Area"><i class="fa-solid fa-earth-americas me-3 fa-fw"></i>Area</li>
+            <li class="Ingredient"><i class="fa-brands fa-docker me-3 fa-fw"></i>Ingredients</li>
+            <li class="Contact"><i class="fa-solid fa-phone me-3 fa-fw"></i>Contact Us</li>
+          </ul>
+          <div class="social">
+             <i class="fa-brands fa-facebook-f me-3 fs-3"></i>
+             <i class="fa-brands fa-twitter me-3 fs-3"></i>
+             <i class="fa-solid fa-globe fs-3"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 p-0">
+        <div class="nav vh-100 d-flex flex-column py-4 justify-content-between align-items-center position-relative">
+          <div class="logo"><i class="fa-solid fa-pizza-slice text-white fa-3x"></i></div>
+          <div class="bar"><i class="fa-solid text-white fs-3 fa-bars-staggered"></i></div>
+          <div><i class="fa-solid d-block mb-3 text-white fa-globe fs-5"></i>
+            <i class="fa-solid text-white fs-5 fa-share-nodes"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- side bar -->
+
+
+    <!-- landing page -->
+    <section class="landing">
+      <div class="container w-75">
+      <div class="row gy-4">
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- details -->
+    <section class="Detail d-none">
+      <div class="container w-75">
+        <div class="row gx-lg-4">
+        </div>
+      </div>
+
+    </section>
+    <!-- search -->
+    <section class="search d-none">
+      <div class="container w-75 ">
+        <div class="row gy-4">
+          <div class="col-6">
+            <input type="text" class="form-control p-3 rounded-pill searchName"  placeholder="Search By Name">
+          </div>
+        <div class="col-6">
+           <input type="text" class="form-control p-3 rounded-pill searchLetter"   placeholder="Search By First Letter">
+        </div>
+        <div class="row searchDetails gy-4">
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- category -->
+    <section class="categories">
+            <div class="container w-75">
+      <div class="mainCategory row gy-4">
+      </div>
+      <div class="filterCategory d-none row gy-4">
+      </div>
+      </div>
+    </section>
+    <!-- area -->
+      <section class="areas">
+      <div class="container w-75">
+      <div class="mainArea row gy-4">
+      </div>
+      <div class="filterArea d-none row gy-4">
+      </div>
+      </div>
+    </section>
+    <!-- ingrediant -->
+      <section class="Ingredients">
+      <div class="container w-75">
+      <div class="mainIngredients row gy-4">
+      </div>
+      <div class="filterIngredients d-none row gy-4">
+      </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="container myM w-75 mx-auto d-none mb-5">
+      <div class="p-2">
+			<h2 class="text-light mb-5 text-center">ContactUs</h2>
+			<div class="row g-3">
+				<div class="col-md-6">
+					<div class="form-group">
+						<input class="form-control shadow " onkeyup="validation()" id="name"
+							placeholder="Enter Your Name">
+						<div class="alert mt-1 alert-danger d-none" id="namealert" role="alert">
+							Special Characters and Numbers not allowed
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input onkeyup="validation()" class="form-control" id="email" placeholder="Enter Email">
+						<div class="alert mt-1 alert-danger d-none" id="emailalert" role="alert">
+							Enter valid email. *Ex: xxx@yyy.zzz
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input onkeyup="validation()" class="form-control" id="phone" placeholder="Enter phone">
+						<div class="alert mt-1 alert-danger  d-none" id="phonealert" role="alert">
+							Enter valid Phone Number
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input onkeyup="validation()" class="form-control" id="age" placeholder="Enter Age">
+						<div class="alert mt-1 alert-danger  d-none" id="agealert" role="alert">
+							Enter valid Age
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input onkeyup="validation()" class="form-control" type="password" id="password"
+							placeholder="Enter Password">
+						<div class="alert mt-1 alert-danger  d-none" id="passwordalert" role="alert">
+							Enter valid password *Minimum eight characters, at least one letter and one number:*
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input onkeyup="validation()" class="form-control" type="password" id="rePassword"
+							placeholder="Enter RePassword">
+						<div class="alert mt-1 alert-danger  d-none" id="repasswordalert" role="alert">
+							Enter valid Repassword
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="submit" disabled id="submitBtn" class="btn btn-outline-danger d-block mx-auto my-4">Submit</button>
+		</div>
+	</section>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
